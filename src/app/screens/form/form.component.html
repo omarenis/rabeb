@@ -1,0 +1,73 @@
+<form [formGroup]="formGroup" class="example-form">
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>إسم و لقب الطفل</mat-label>
+    <input formControlName="name" matInput placeholder="" type="text">
+    <mat-error *ngIf="!formGroup.get('name')?.hasError('required')">
+      إسم و لقب الطفل <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>المدرسة مَطْلوب</mat-label>
+    <input formControlName="email" matInput placeholder="Ex. pat@example.com" type="email">
+    <mat-error *ngIf="formGroup.get('school')?.hasError('required')">
+      المدرسة <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>تاريخ الولادة</mat-label>
+    <input formControlName="birthdate" matInput placeholder="Ex. pat@example.com" type="date">
+    <mat-error *ngIf="formGroup.get('birthdate')?.hasError('required')">
+      تاريخ الولادة <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>إسم و لقب الولي</mat-label>
+    <input formControlName="parentFullName" matInput placeholder="Ex. pat@example.com" type="text">
+    <mat-error *ngIf="formGroup.get('parentFullName')?.hasError('required')">
+      إسم و لقب الولي <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>رقم بطاقة التعريف الوطنية</mat-label>
+    <input formControlName="cin" matInput placeholder="Ex. pat@example.com" type="text">
+    <mat-error *ngIf="formGroup.get('cin')?.hasError('required')">
+      رقم بطاقة التعريف الوطنية <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>البريد الإلكتروني</mat-label>
+    <input formControlName="email" matInput placeholder="Ex. pat@example.com" type="email">
+    <mat-error *ngIf="formGroup.get('email')?.hasError('required')">
+      البريد الإلكتروني <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>كلمة السر</mat-label>
+    <input [type]="hide ? 'password' : 'text'" formControlName="password" matInput>
+    <button (click)="changeVisibility()" [attr.aria-label]="'كلمة السر'" [attr.aria-pressed]="hide" mat-icon-button
+            matSuffix>
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error *ngIf="formGroup.get('email')?.hasError('required')">
+      كلمة السر <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>الترقيم البريدي</mat-label>
+    <input formControlName="zipCode" matInput placeholder="Ex. pat@example.com" type="text">
+    <mat-error *ngIf="formGroup.get('zipCode')?.hasError('required')">
+      الترقيم البريدي <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>الولاية</mat-label>
+    <input formControlName="city" matInput placeholder="Ex. pat@example.com" type="email">
+    <mat-error *ngIf="formGroup.get('city')?.hasError('required')">
+      الولاية <strong>مَطْلوب</strong>
+    </mat-error>
+  </mat-form-field>
+  <div class="example-button-container">
+    <button color="accent" mat-raised-button style="margin-right: 50%;">Accent</button>
+    <button color="warn" mat-raised-button>Warn</button>
+  </div>
+</form>

@@ -1,0 +1,21 @@
+table {
+  background-color: #FFFFFF;
+}
+
+td {
+  text-align: center;
+  color: black;
+}
+
+th{
+  text-align: center;
+  color: black;
+}
+
+.example-button-row {
+  display: table-cell;
+}
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
