@@ -1,0 +1,40 @@
+{
+  "patients": [
+    {
+      "id": 3,
+      "firstname": "omar",
+      "lastname": "triki",
+      "age": 12,
+      "situation": "مؤجل",
+      "email": "test@gmail.com",
+      "telephone": "24127616"
+    },
+    {
+      "id": 4,
+      "firstname": "omar",
+      "lastname": "triki",
+      "age": 12,
+      "situation": "مؤجل",
+      "email": "test@gmail.com",
+      "telephone": "24127616"
+    },
+    {
+      "id": 5,
+      "firstname": "omar",
+      "lastname": "triki",
+      "age": 12,
+      "situation": "مؤجل",
+      "email": "test@gmail.com",
+      "telephone": "24127616"
+    },
+    {
+      "id": 6,
+      "firstname": "omar",
+      "lastname": "triki",
+      "age": 12,
+      "situation": "مؤجل",
+      "email": "test@gmail.com",
+      "telephone": "24127616"
+    }
+  ]
+}

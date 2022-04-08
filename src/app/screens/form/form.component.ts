@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit, Output} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -8,7 +9,8 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 export class FormComponent implements OnInit {
   formGroup !: FormGroup;
   hide !: boolean;
-  constructor() { }
+  @Output() patient: any;
+  constructor(public dialogRef: MatDialogRef<FormComponent>) { }
 
   ngOnInit(): void {
     this.hide = true;
@@ -27,5 +29,9 @@ export class FormComponent implements OnInit {
   }
   changeVisibility(): void{
     this.hide = !this.hide;
+  }
+  submit(): void {}
+  close(): void{
+    this.dialogRef.close();
   }
 }

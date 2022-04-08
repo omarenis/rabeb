@@ -1,4 +1,6 @@
 <form [formGroup]="formGroup" class="example-form">
+<h2 mat-dialog-title>add child form</h2>
+<mat-dialog-content >
   <mat-form-field appearance="fill" class="example-full-width">
     <mat-label>إسم و لقب الطفل</mat-label>
     <input formControlName="name" matInput placeholder="" type="text">
@@ -66,8 +68,9 @@
       الولاية <strong>مَطْلوب</strong>
     </mat-error>
   </mat-form-field>
-  <div class="example-button-container">
+  <mat-dialog-actions class="example-button-container" style="width: 100%">
     <button color="accent" mat-raised-button style="margin-right: 50%;">Accent</button>
-    <button color="warn" mat-raised-button>Warn</button>
-  </div>
+    <button color="warn" mat-raised-button (click)="close()">Warn</button>
+  </mat-dialog-actions>
+</mat-dialog-content>
 </form>
